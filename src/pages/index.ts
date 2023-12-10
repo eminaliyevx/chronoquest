@@ -1,0 +1,9 @@
+export { default as CategoryPuzzles } from "./category-puzzles";
+export { default as Home } from "./home";
+export { default as Play } from "./play";
+export { default as PlayMulti } from "./play-multi";
+export { default as PlayMultiAi } from "./play-multi-ai";
+export { default as PlayPuzzle } from "./play-puzzle";
+export { default as PlaySingle } from "./play-single";
+export { default as PlaySingleCategory } from "./play-single-category";
+export { default as PlaySinglePuzzle } from "./play-single-puzzle";
