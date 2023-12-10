@@ -167,33 +167,32 @@ const PlaySinglePuzzle = () => {
               gridTemplateColumns: `repeat(${puzzle.column}, ${puzzle?.images[0].width}px)`,
             }}
           >
-            {puzzle?.images
-              .map((item: any, index: number) => (
-                <Box
-                  key={`result-${index}`}
+            {puzzle?.images.map((item: any, index: number) => (
+              <Box
+                key={`result-${index}`}
+                w={item.width}
+                h={item.height}
+                bg="dark.4"
+                style={{
+                  border: "1px solid var(--mantine-color-blue-5)",
+                }}
+              >
+                <Image
                   w={item.width}
                   h={item.height}
-                  bg="dark.4"
-                  style={{
-                    border: "1px solid var(--mantine-color-blue-5)",
-                  }}
-                >
-                  <Image
-                    w={item.width}
-                    h={item.height}
-                    fallbackSrc={`https://placehold.co/${item.width}x${item.height}`}
-                    onDragStart={handleDragStart}
-                    onDragOver={handleDragOver}
-                    onDragEnter={handleDragEnter}
-                    onDragLeave={handleDragLeave}
-                    onDrop={handleDragDrop}
-                    onDragEnd={handleDragEnd}
-                    data-piece
-                    data-row={Math.floor(index / 5)}
-                    data-col={index % 5}
-                  />
-                </Box>
-              ))}
+                  fallbackSrc={`https://placehold.co/${item.width}x${item.height}`}
+                  onDragStart={handleDragStart}
+                  onDragOver={handleDragOver}
+                  onDragEnter={handleDragEnter}
+                  onDragLeave={handleDragLeave}
+                  onDrop={handleDragDrop}
+                  onDragEnd={handleDragEnd}
+                  data-piece
+                  data-row={Math.floor(index / 5)}
+                  data-col={index % 5}
+                />
+              </Box>
+            ))}
           </Box>
 
           <Flex wrap="wrap" gap={16}>

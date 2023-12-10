@@ -6,6 +6,7 @@ import { MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 import { ModalsProvider } from "@mantine/modals";
 import { Notifications } from "@mantine/notifications";
+import "@mantine/notifications/styles.css";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect } from "react";
 import {
