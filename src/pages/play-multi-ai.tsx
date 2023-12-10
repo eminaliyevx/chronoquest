@@ -5,9 +5,7 @@ import {
   Grid,
   Group,
   Image,
-  SimpleGrid,
   Stack,
-  Text,
   TextInput,
   Title,
 } from "@mantine/core";
